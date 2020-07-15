@@ -104,9 +104,9 @@ const data = [
   Your function should take either an object as its one argument, or 5 separate strings mapping to each property of an article object.
 */
 
-console.log(data[0].title)
-
-const articleMaker = (title, paragraph) => {
+/* console.log(data[0].title) */
+const articles = document.querySelector('.articles'); 
+const articleMaker = (title, paragraph1, paragraph2, paragraph3) => {
   let article = document.createElement('div');
   let h2 = document.createElement('h2');
   h2.textContent = title; 
@@ -116,21 +116,21 @@ const articleMaker = (title, paragraph) => {
   let secondParagraph = document.createElement('p');
   let thirdParagraph = document.createElement('p');
   firstParagraph.classList.add('first-p');
+  firstParagraph.textContent = paragraph1; 
   secondParagraph.classList.add('second-p');
+  secondParagraph.textContent = paragraph2; 
   thirdParagraph.classList.add('third-p');
+  thirdParagraph.textContent = paragraph3; 
 
   article.appendChild(firstParagraph);
   article.appendChild(secondParagraph); 
   article.appendChild(thirdParagraph); 
 
-
-  console.log(article); 
   return article; 
-
-
-
 }
-articleMaker(data.title); 
+articleMaker('title', 'para1', 'para2', 'para3');
+articles.appendChild(articleMaker('title', 'para1', 'para2', 'para3')); 
+
 
 
 /*Step 2: Add an event listener to the expandButton span. This listener should toggle the class 'article-open' on the 'article' div.
