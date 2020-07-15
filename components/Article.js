@@ -153,11 +153,11 @@ data.forEach(obj => {
 const article = document.querySelectorAll('.article'); 
 const expandButton = document.querySelectorAll('.expandButton'); 
 
-/* article.forEach(article => {
+article.forEach(article => {
   article.addEventListener('click', () => {
     article.classList.toggle('article-open')
   })
-}) */
+})
 
 
 /*Step 3: Don't forget to return something from your function!*/
