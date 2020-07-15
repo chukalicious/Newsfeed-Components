@@ -131,9 +131,9 @@ const articleMaker = (title, articleDate, paragraph1, paragraph2, paragraph3) =>
   let thirdParagraph = document.createElement('p');
   thirdParagraph.classList.add('third-p');
   thirdParagraph.textContent = paragraph3;
-  let span = document.createElement('span');
+  let span = document.createElement('button');
   span.classList.add('expandButton'); 
-  span.textContent = '+';
+  span.textContent = '\u25bc';
   
   article.appendChild(h2);
   article.appendChild(date); 
