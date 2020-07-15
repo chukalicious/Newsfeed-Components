@@ -145,13 +145,14 @@ data.forEach(obj => {
 
 /*Step 2: Add an event listener to the expandButton span. This listener should toggle the class 'article-open' on the 'article' div.
 */
-const article = document.querySelector('.article'); 
+const article = document.querySelectorAll('.article'); 
 const expandButton = document.querySelectorAll('.expandButton'); 
-expandButton.forEach(button => {
-  button.addEventListener('click', () => {
-    console.log('clicked'); 
+article.forEach(article => {
+  article.addEventListener('click', () => {
+    article.classList.toggle('article-open')
   })
 })
+
 
 
 
