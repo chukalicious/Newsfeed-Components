@@ -85,6 +85,14 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Pride and Prejudice',
+    date: 'July 7th, 2020',
+    firstParagraph: 'Mr. Collins,” said she, “speaks highly both of Lady Catherine and her daughter; but from some particulars that he has related of her ladyship, I suspect his gratitude misleads him, and that in spite of her being his patroness, she is an arrogant, conceited woman.',
+    secondParagraph: 'I believe her to be both in a great degree,” replied Wickham; “I have not seen her for many years, but I very well remember that I never liked her, and that her manners were dictatorial and insolent. She has the reputation of being remarkably sensible and clever; but I rather believe she derives part of her abilities from her rank and fortune, part from her authoritative manner, and the rest from the pride for her nephew, who chooses that everyone connected with him should have an understanding of the first class.',
+    thirdParagraph: 'Elizabeth allowed that he had given a very rational account of it, and they continued talking together, with mutual satisfaction till supper put an end to cards, and gave the rest of the ladies their share of Mr. Wickham’s attentions. There could be no conversation in the noise of Mrs. Phillips’s supper party, but his manners recommended him to everybody. Whatever he said, was said well; and whatever he did, done gracefully. Elizabeth went away with her head full of him. She could think of nothing but of Mr. Wickham, and of what he had told her, all the way home; but there was not time for her even to mention his name as they went, for neither Lydia nor Mr. Collins were once silent. Lydia talked incessantly of lottery tickets, of the fish she had lost and the fish she had won; and Mr. Collins in describing the civility of Mr. and Mrs. Phillips, protesting that he did not in the least regard his losses at whist, enumerating all the dishes at supper, and repeatedly fearing that he crowded his cousins, had more to say than he could well manage before the carriage stopped at Longbourn House.'
+
   }
 ];
 
@@ -144,16 +152,14 @@ const articleMaker = (title, articleDate, paragraph1, paragraph2, paragraph3) =>
   return article; 
 }
 
+/*Step 4: Outside your function, loop over the data. At each iteration you'll use your component to create an article and append it to the DOM inside the 'articles' div.*/
+
 data.forEach(obj => {
   articles.appendChild(articleMaker(obj.title, obj.date, obj.firstParagraph, obj.secondParagraph, obj.thirdParagraph))
 })
 
-
-
-
-
-
-/*Step 4: Outside your function, loop over the data. At each iteration you'll use your component to create an article and append it to the DOM inside the 'articles' div.*/
-
 /*Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 */
+//See object
+
+
