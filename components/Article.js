@@ -134,13 +134,13 @@ const articleMaker = (title, articleDate, paragraph1, paragraph2, paragraph3) =>
   article.appendChild(thirdParagraph); 
   article.appendChild(span); 
   
-  
+  /*Step 2: Add an event listener to the expandButton span. This listener should toggle the class 'article-open' on the 'article' div.
+*/
   span.addEventListener('click', () => {
-      article.forEach(article => {
-        article.classList.add('article-open');
-      })
+    article.classList.toggle('article-open'); 
   })
   
+  /*Step 3: Don't forget to return something from your function!*/
   return article; 
 }
 
@@ -148,19 +148,10 @@ data.forEach(obj => {
   articles.appendChild(articleMaker(obj.title, obj.date, obj.firstParagraph, obj.secondParagraph, obj.thirdParagraph))
 })
 
-/*Step 2: Add an event listener to the expandButton span. This listener should toggle the class 'article-open' on the 'article' div.
-*/
-const article = document.querySelectorAll('.article'); 
-const expandButton = document.querySelectorAll('.expandButton'); 
-
-article.forEach(article => {
-  article.addEventListener('click', () => {
-    article.classList.toggle('article-open')
-  })
-})
 
 
-/*Step 3: Don't forget to return something from your function!*/
+
+
 
 /*Step 4: Outside your function, loop over the data. At each iteration you'll use your component to create an article and append it to the DOM inside the 'articles' div.*/
 
