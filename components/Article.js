@@ -104,7 +104,6 @@ const data = [
   Your function should take either an object as its one argument, or 5 separate strings mapping to each property of an article object.
 */
 
-/* console.log(data[0].title) */
 const articles = document.querySelector('.articles'); 
 
 const articleMaker = (title, articleDate, paragraph1, paragraph2, paragraph3) => {
@@ -134,8 +133,14 @@ const articleMaker = (title, articleDate, paragraph1, paragraph2, paragraph3) =>
   article.appendChild(secondParagraph); 
   article.appendChild(thirdParagraph); 
   article.appendChild(span); 
-
-  // console.log(article); 
+  
+  
+  span.addEventListener('click', () => {
+      article.forEach(article => {
+        article.classList.add('article-open');
+      })
+  })
+  
   return article; 
 }
 
@@ -147,13 +152,12 @@ data.forEach(obj => {
 */
 const article = document.querySelectorAll('.article'); 
 const expandButton = document.querySelectorAll('.expandButton'); 
-article.forEach(article => {
+
+/* article.forEach(article => {
   article.addEventListener('click', () => {
     article.classList.toggle('article-open')
   })
-})
-
-
+}) */
 
 
 /*Step 3: Don't forget to return something from your function!*/
