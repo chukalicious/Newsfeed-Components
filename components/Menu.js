@@ -18,16 +18,41 @@ let menuItems = [
     </ul>
   </div>
 
-  The 'menuMaker' takes an array as its only argument.
+  The 'menuMaker' takes an array as its only argument. */
+  const header = document.querySelector('.header')
 
-  Step 2: Inside the function, iterate over the array creating a list item <li> element for each item in the array. 
-  Add those items to the <ul>
+  function menuMaker(array) {
+    let menu = document.createElement('div');
+    menu.classList.add('menu');
+    header.appendChild(menu); 
+    let ul = document.createElement('ul');
+    menu.appendChild(ul); 
 
-  Step 3: Using a DOM selector, select the menu button (the element with a class of 'menu-button') currently on the DOM.
+    
+    /* Step 2: Inside the function, iterate over the array creating a list item <li> element for each item in the array. 
+    Add those items to the <ul> */
+    array.forEach(item => {
+      let li = document.createElement('li');
+      ul.appendChild(li);
+      li.textContent = item; 
+    })
 
-  Step 4: add a click event listener to the menu button. When clicked it should toggle the class 'menu--open' on the menu (your div with a 'menu' class).
+    /*Step 3: Using a DOM selector, select the menu button (the element with a class of 'menu-button') currently on the DOM. */
 
-  Step 5: return your div with a 'menu' class.
+    let menuButton = document.querySelector('.menu-button'); 
 
-  Step 6: Use 'menuMaker' to create a menu using the 'menuItems' array, and append the returned menu to the header.
-*/
+    /*Step 4: add a click event listener to the menu button. When clicked it should toggle the class 'menu--open' on the menu (your div with a 'menu' class). */
+
+    menuButton.addEventListener('click', () => {
+      menu.classList.toggle('menu--open'); 
+    })
+
+    /* Step 5: return your div with a 'menu' class. */
+    return menu
+  }
+
+  menuMaker(menuItems); 
+
+  /* Step 6: Use 'menuMaker' to create a menu using the 'menuItems' array, and append the returned menu to the header. */
+
+  //See lines 22 and 27
